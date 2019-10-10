@@ -1,7 +1,14 @@
 import csv 
 
-file = open('data.csv', 'w', newline='')
+file = open('data.csv', 'r', newline='')
 
-writer = csv.writer(file)
+#writer = csv.writer(file)
 
-writer.writerow(['hello', 'world'])
+
+#for i in range(30):
+#    writer.writerow(['hello', 'world'])
+
+reader = csv.reader(file)
+stuff = list(reader)
+
+print(stuff[3])
